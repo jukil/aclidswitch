@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sed -i 's/HandleLidSwitch=suspend/HandleLidSwitch=$1/' /etc/systemd/logind.conf
+systemctl restart systemd-logind
+

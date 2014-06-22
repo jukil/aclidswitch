@@ -1,0 +1,6 @@
+# Settings on battery
+SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="aclidswitch suspend"
+
+# Settings on AC
+SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="aclidswitch ignore"
+
