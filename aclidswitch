@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sed -i 's/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$1/' /etc/systemd/logind.conf
+sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$1/" /etc/systemd/logind.conf
 systemctl restart systemd-logind
 
