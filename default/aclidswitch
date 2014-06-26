@@ -1,0 +1,15 @@
+# ------------------------------------------------------------------------------    
+# aclidswitch - Parameters for lid switch action depending on AC state
+
+# You can choose from the following actions
+# - suspend
+# - hibernate
+# - ignore
+# - poweroff
+# - reboot
+# - halt 
+# - kexec
+# - hybrid-sleep
+# - lock
+LID_SWITCH_ACTION_BAT=suspend
+LID_SWITCH_ACTION_AC=ignore

@@ -1,5 +1,18 @@
 #!/bin/bash
 
-sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$1/" /etc/systemd/logind.conf
+# define the lid switch actions
+source /etc/default/aclidswitch
+
+# set by 60-aclidswitch.rule
+case "$1" in 
+
+battery)
+    sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_BAT/" /etc/systemd/logind.conf
+    ;;
+AC)
+    sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_AC/" /etc/systemd/logind.conf
+    ;;
+esac
+
 systemctl restart systemd-logind
 

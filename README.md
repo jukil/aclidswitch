@@ -1,12 +1,9 @@
-aclidswitch
-===========
-
+# aclidswitch
 Change systemd's lid switch action depending on the laptop's AC state
 
-Installation
-============
-
-Configure `60-aclidswitch.rules` and set your desired actions depending on the
+# Installation
+Configure `default/aclidswitch` and set your desired actions for 
+`LID_SWITCH_ACTION_BAT` and `LID_SWITCH_ACTION_AC` depending on the
 AC state. The default settings are `suspend` on battery and `ignore` on 
 AC. Possible settings are:
 
@@ -20,8 +17,9 @@ AC. Possible settings are:
 * `hybrid-sleep`
 * `lock`
 
-Place `60-aclidswitch.rules` in `/etc/udev/rules.d` and `aclidswitch` on your
-path, e.g. `/usr/local/bin`.
+Place `default/aclidswitch` in `/etc/default`, `60-aclidswitch.rules` 
+in `/etc/udev/rules.d` and `aclidswitch` in `/usr/bin`.
 
+## Arch Linux
 Arch Linux users can also install the package from the AUR 
 [here](https://aur.archlinux.org/packages/aclidswitch/).
