@@ -22,4 +22,4 @@ in `/etc/udev/rules.d` and `aclidswitch` in `/usr/bin`.
 
 ## Arch Linux
 Arch Linux users can also install the package from the AUR 
-[here](https://aur.archlinux.org/packages/aclidswitch/).
+[here](https://aur.archlinux.org/packages/aclidswitch-git/).
