@@ -13,3 +13,8 @@
 # - lock
 LID_SWITCH_ACTION_BAT=suspend
 LID_SWITCH_ACTION_AC=ignore
+
+# Brightness settings
+#BRIGHTNESS_SYS_PATH="/sys/class/backlight/acpi_video0/brightness"
+#BRIGHTNESS_AC=14
+#BRIGHTNESS_BAT=5
