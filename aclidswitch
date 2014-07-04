@@ -3,18 +3,22 @@
 # define the lid switch actions
 source /etc/default/aclidswitch
 
-# set by 60-aclidswitch.rule
+# set by 60-aclidswitch.rules & 99-low-battery-action.rules
 case "$1" in 
 
 battery)
     sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_BAT/" /etc/systemd/logind.conf
     echo $BRIGHTNESS_BAT > $BRIGHTNESS_SYS_PATH
+    systemctl restart systemd-logind
     ;;
 AC)
     sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_AC/" /etc/systemd/logind.conf
     echo $BRIGHTNESS_AC > $BRIGHTNESS_SYS_PATH
+    systemctl restart systemd-logind
     ;;
+lowbat)
+    systemctl $LOW_BAT_ACTION
 esac
 
-systemctl restart systemd-logind
+
 
