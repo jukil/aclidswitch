@@ -19,7 +19,6 @@ LID_SWITCH_ACTION_AC=ignore
 #LOW_BAT_ACTION=hibernate
 
 # Brightness settings
-#BRIGHTNESS_SYS_PATH="/sys/class/backlight/acpi_video0/brightness"
-#BRIGHTNESS_AC=14
-#BRIGHTNESS_BAT=5
+#BRIGHTNESS_AC=90
+#BRIGHTNESS_BAT=35
 

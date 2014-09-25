@@ -1,0 +1,6 @@
+# Settings on battery
+SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="0", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/$USER/.Xauthority", RUN+="/usr/bin/aclidswitch battery"
+
+# Settings on AC
+SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/$USER/.Xauthority", RUN+="/usr/bin/aclidswitch AC"
+

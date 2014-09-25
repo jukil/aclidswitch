@@ -8,12 +8,12 @@ case "$1" in
 
 battery)
     sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_BAT/" /etc/systemd/logind.conf
-    echo $BRIGHTNESS_BAT > $BRIGHTNESS_SYS_PATH
+    /usr/bin/xbacklight -set $BRIGHTNESS_BAT
     systemctl restart systemd-logind
     ;;
 AC)
     sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_AC/" /etc/systemd/logind.conf
-    echo $BRIGHTNESS_AC > $BRIGHTNESS_SYS_PATH
+    /usr/bin/xbacklight -set $BRIGHTNESS_AC
     systemctl restart systemd-logind
     ;;
 lowbat)
