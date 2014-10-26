@@ -1,20 +1,26 @@
 # aclidswitch
-Simple Power Management tool to be used supplementary to
-[TLP](https://github.com/linrunner/TLP).
-* Change systemd's lid switch action depending on the laptop's AC state
-* Define an action on low battery capacity
-* Set different brightness levels for battery and AC use
+Simple Power Management tool that can be used supplementary to
+[TLP](https://github.com/linrunner/TLP) to provide the following functionality:
+
+* **Custom lid actions.** If running on battery, turn your laptop into standby when the lid is closed. If the laptop is charging, then do nothing.
+* **Low battery action.** Put your laptop into hibernation if the battery reaches a critically low level.
+* **Custom brightness.** Set different brightness levels for battery and AC use.
 
 # Installation
-Configure `default/aclidswitch` and set your desired actions 
-Place `default/aclidswitch` in `/etc/default`, `60-aclidswitch.rules` & 
-`99-low-battery-action.rules` in `/etc/udev/rules.d` 
-and `aclidswitch` in `/usr/bin`.
+Place the following files as follows in your file systemL
+
+```
+default/aclidswitch ➡ /etc/default
+60-aclidswitch.rules ➡ /etc/udev/rules.d
+99-low-battery-action.rules ➡ /etc/udev/rules.d
+aclidswitch ➡ /usr/local/bin
+```
+
+Configure `/etc/default/aclidswitch` and define your desired settings.
 
 ## Arch Linux
-Arch Linux users can also install the package from the AUR
-[here](https://aur.archlinux.org/packages/aclidswitch-git/).
+Arch Linux users can also install [the package](https://aur.archlinux.org/packages/aclidswitch-git/) from the AUR.
 
 # Feedback
-I am very happy to listen to feedback. File an issue or write me an 
+I am very happy to receive your feedback. File an issue or write me an 
 email with my Github username at Gmail.

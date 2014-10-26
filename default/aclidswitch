@@ -22,3 +22,8 @@ LID_SWITCH_ACTION_AC=ignore
 #BRIGHTNESS_AC=90
 #BRIGHTNESS_BAT=35
 
+# Start the following systemd services on AC
+#SYSTEMD_AC="crashplan insync@<username> dropbox@<username>"
+# Stop the following systemd services on BAT        
+#SYSTEMD_BAT="crashplan insync@<username> dropbox@<username>"
+

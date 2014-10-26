@@ -10,15 +10,21 @@ battery)
     sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_BAT/" /etc/systemd/logind.conf
     /usr/bin/xbacklight -set $BRIGHTNESS_BAT
     systemctl restart systemd-logind
+    for SERVICE in $SYSTEMD_BAT
+    do
+        systemctl stop $SERVICE
+    done
     ;;
 AC)
     sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_AC/" /etc/systemd/logind.conf
     /usr/bin/xbacklight -set $BRIGHTNESS_AC
     systemctl restart systemd-logind
+    for SERVICE in $SYSTEMD_AC
+    do
+        systemctl restart $SERVICE
+    done
     ;;
 lowbat)
     systemctl $LOW_BAT_ACTION
+    ;;
 esac
-
-
-
