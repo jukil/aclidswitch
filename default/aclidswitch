@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------    
 # aclidswitch - Parameters for lid switch action depending on AC state
 
-# You can choose from the following actions
+# You can choose from:
 # - suspend
 # - hibernate
 # - ignore
@@ -18,9 +18,21 @@ LID_SWITCH_ACTION_AC=ignore
 # Can be changed in 99-low-battery-action.rules
 #LOW_BAT_ACTION=hibernate
 
-# Brightness settings
+#------------------------------------------------------------------------------
+# Display settings
+
+# Brightness settings using xbacklight
+# Percentage values
 #BRIGHTNESS_AC=90
 #BRIGHTNESS_BAT=35
+
+# DPMS settings
+#DPMS_AC=off
+# Set blank times in seconds <standby> <suspend> <off>
+#DPMS_BAT=100 100 100
+
+#------------------------------------------------------------------------------
+# Custom applications
 
 # Start the following systemd services on AC
 #SYSTEMD_AC="crashplan insync@<username> dropbox@<username>"
