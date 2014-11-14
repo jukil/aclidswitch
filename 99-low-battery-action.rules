@@ -1,3 +1,3 @@
-# Hibernates the system when battery level drops to 0%
-# https://wiki.archlinux.org/index.php/Laptop#Udev_events
-SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="0", RUN+="aclidswitch lowbat"
+# Run aclidswitch when battery level drops to 3% or lower
+# https://wiki.archlinux.org/index.php/Laptop#hibernate_on_low_battery_level
+SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-3]", RUN+="/usr/bin/aclidswitch lowbat"
