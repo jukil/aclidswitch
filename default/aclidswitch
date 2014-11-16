@@ -29,7 +29,7 @@ LID_SWITCH_ACTION_AC=ignore
 # DPMS settings
 #DPMS_AC=off
 # Set blank times in seconds <standby> <suspend> <off>
-#DPMS_BAT=100 100 100
+#DPMS_BAT="100 100 100"
 
 #------------------------------------------------------------------------------
 # Custom applications
