@@ -28,8 +28,8 @@ LID_SWITCH_ACTION_AC=ignore
 
 # DPMS settings
 # Set blank times in seconds <standby> <suspend> <off>
-#DPMS_AC="600 600 600"
-#DPMS_BAT="100 100 100"
+#DPMS_AC="-dpms; xset s off"
+#DPMS_BAT="dpms 100 100 100"
 
 #------------------------------------------------------------------------------
 # Custom applications
@@ -38,4 +38,3 @@ LID_SWITCH_ACTION_AC=ignore
 #SYSTEMD_AC="crashplan insync@<username> dropbox@<username>"
 # Stop the following systemd services on BAT        
 #SYSTEMD_BAT="crashplan insync@<username> dropbox@<username>"
-
