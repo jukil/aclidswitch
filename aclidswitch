@@ -9,8 +9,10 @@ case "$1" in
 battery)
     sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_BAT/" /etc/systemd/logind.conf
     /usr/bin/xbacklight -set $BRIGHTNESS_BAT
-    xset $DPMS_BAT
     systemctl restart systemd-logind
+
+    $DPMS_BAT
+    
     for SERVICE in $SYSTEMD_BAT
     do
         systemctl stop $SERVICE
@@ -19,8 +21,10 @@ battery)
 AC)
     sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_AC/" /etc/systemd/logind.conf
     /usr/bin/xbacklight -set $BRIGHTNESS_AC
-    xset $DPMS_AC
     systemctl restart systemd-logind
+
+    $DPMS_AC
+    
     for SERVICE in $SYSTEMD_AC
     do
         systemctl restart $SERVICE

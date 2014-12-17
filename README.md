@@ -5,6 +5,7 @@ Simple Power Management tool that can be used supplementary to
 * **Custom lid actions.** If running on battery, turn your laptop into standby when the lid is closed. If the laptop is charging, then do nothing.
 * **Low battery action.** Put your laptop into hibernation if the battery reaches a critically low level.
 * **Custom brightness.** Set different brightness levels for battery and AC use.
+* **Custom display management (DPMS) settings**: Disable DPMS on AC or change the blanking times on battery.
 
 # Installation
 Place the following files as follows in your file systemL

@@ -27,9 +27,9 @@ LID_SWITCH_ACTION_AC=ignore
 #BRIGHTNESS_BAT=35
 
 # DPMS settings
+#DPMS_AC="xset -dpms; xset s off"
 # Set blank times in seconds <standby> <suspend> <off>
-#DPMS_AC="-dpms; xset s off"
-#DPMS_BAT="dpms 100 100 100"
+#DPMS_BAT="xset dpms 100 100 100"
 
 #------------------------------------------------------------------------------
 # Custom applications
