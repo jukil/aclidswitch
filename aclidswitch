@@ -11,7 +11,10 @@ battery)
     /usr/bin/xbacklight -set $BRIGHTNESS_BAT
     systemctl restart systemd-logind
 
-    $DPMS_BAT
+    for DPMS in $DPMS_BAT
+    do 
+        DPMS
+    done
     
     for SERVICE in $SYSTEMD_BAT
     do
@@ -23,7 +26,10 @@ AC)
     /usr/bin/xbacklight -set $BRIGHTNESS_AC
     systemctl restart systemd-logind
 
-    $DPMS_AC
+    for DPMS in $DPMS_AC
+    do 
+        DPMS
+    done
     
     for SERVICE in $SYSTEMD_AC
     do
