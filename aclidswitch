@@ -13,7 +13,7 @@ battery)
 
     for DPMS in $DPMS_BAT
     do 
-        DPMS
+        $DPMS
     done
     
     for SERVICE in $SYSTEMD_BAT
@@ -28,7 +28,7 @@ AC)
 
     for DPMS in $DPMS_AC
     do 
-        DPMS
+        $DPMS
     done
     
     for SERVICE in $SYSTEMD_AC
