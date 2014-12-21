@@ -6,6 +6,9 @@ source /etc/default/aclidswitch
 # set by 60-aclidswitch.rules & 99-low-battery-action.rules
 case "$1" in 
 
+# make newlines the only separator
+IFS=$'\n'
+
 battery)
     sed -i "s/^.*\bHandleLidSwitch\b.*$/HandleLidSwitch=$LID_SWITCH_ACTION_BAT/" /etc/systemd/logind.conf
     /usr/bin/xbacklight -set $BRIGHTNESS_BAT
