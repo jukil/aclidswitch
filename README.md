@@ -12,7 +12,7 @@ Place the following files as follows in your file systemL
 
 ```
 default/aclidswitch ➡ /etc/default
-60-aclidswitch.rules ➡ /etc/udev/rules.d
+98-aclidswitch.rules ➡ /etc/udev/rules.d
 99-low-battery-action.rules ➡ /etc/udev/rules.d
 aclidswitch ➡ /usr/local/bin
 ```
