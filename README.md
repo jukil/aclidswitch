@@ -17,6 +17,7 @@ default/aclidswitch ➡ /etc/default
 aclidswitch ➡ /usr/local/bin
 ```
 
+Make the script executable: `chmod +x /usr/local/bin/aclidswitch`.
 Configure `/etc/default/aclidswitch` and define your desired settings.
 
 ## Arch Linux
