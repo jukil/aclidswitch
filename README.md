@@ -22,7 +22,3 @@ Configure `/etc/default/aclidswitch` and define your desired settings.
 
 ## Arch Linux
 Arch Linux users can also install [the package](https://aur.archlinux.org/packages/aclidswitch-git/) from the AUR.
-
-# Feedback
-I am very happy to receive your feedback. File an issue or write me an 
-email with my Github username at Gmail.
