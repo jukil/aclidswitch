@@ -1,4 +1,4 @@
-# ------------------------------------------------------------------------------    
+# ------------------------------------------------------------------------------
 # aclidswitch - Parameters for lid switch action depending on AC state
 
 # You can choose from:
@@ -7,7 +7,7 @@
 # - ignore
 # - poweroff
 # - reboot
-# - halt 
+# - halt
 # - kexec
 # - hybrid-sleep
 # - lock
@@ -27,7 +27,7 @@ LID_SWITCH_ACTION_AC=ignore
 #BRIGHTNESS_BAT=35
 
 # DPMS settings
-# Every single commands needs to be put in '' 
+# Every single commands needs to be put in ''
 # Commands will run after each other
 #DPMS_AC=('xset -dpms' 'xset s off')
 # Set blank times in seconds <standby> <suspend> <off>
@@ -38,5 +38,5 @@ LID_SWITCH_ACTION_AC=ignore
 
 # Start the following systemd services on AC
 #SYSTEMD_AC="crashplan insync@<username> dropbox@<username>"
-# Stop the following systemd services on BAT        
+# Stop the following systemd services on BAT
 #SYSTEMD_BAT="crashplan insync@<username> dropbox@<username>"
